@@ -21,7 +21,7 @@ const LoginPage = () => {
     }
 
     try {
-      const response = await axios.post(`${import.meta.env.VITE_API_URL}/manager/login`, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}manager/login`, {
         email,
         password
       });

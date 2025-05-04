@@ -22,7 +22,7 @@ export default function MyInfoPage() {
       const email = localStorage.getItem('ActiveEmail');
       if (email) {
         try {
-          const response = await axios.get(`${import.meta.env.VITE_API_URL}/manager/profile?email=${email}`);
+          const response = await axios.get(`${import.meta.env.VITE_API_URL}manager/profile?email=${email}`);
           setProfile(response.data);
         } catch (error) {
           console.error("Failed to fetch profile", error);
@@ -53,7 +53,7 @@ export default function MyInfoPage() {
         return;
       }
 
-      await axios.post(`${import.meta.env.VITE_API_URL}/manager/update-password`, {
+      await axios.post(`${import.meta.env.VITE_API_URL}manager/update-password`, {
         email,
         currentPassword,
         newPassword,

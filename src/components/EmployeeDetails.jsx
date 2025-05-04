@@ -20,7 +20,7 @@ const EmployeeDetails = () => {
   useEffect(() => {
     const fetchEmployeeDetails = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_API_URL}/employee/${id}`);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}employee/${id}`);
         setEmployee(response.data);
         setFormData({
           name: response.data.name,
@@ -47,7 +47,7 @@ const EmployeeDetails = () => {
 
   const handleSave = async () => {
     try {
-      await axios.put(`${import.meta.env.VITE_API_URL}/employee/${id}`, formData);
+      await axios.put(`${import.meta.env.VITE_API_URL}employee/${id}`, formData);
       setEmployee({ ...employee, ...formData });
       setIsEditing(false);
     } catch (error) {

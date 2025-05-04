@@ -12,7 +12,7 @@ const EmployeeTable = () => {
 
   const fetchEmployees = async () => {
     try {
-      const response = await axios.post(`${import.meta.env.VITE_API_URL}/employee/get`);
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}employee/get`);
       setData(response.data);
       setLoading(false);
     } catch (error) {
@@ -61,7 +61,7 @@ const EmployeeTable = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${import.meta.env.VITE_API_URL}/employee/${id}`);
+      await axios.delete(`${import.meta.env.VITE_API_URL}employee/${id}`);
       setData(data.filter(employee => employee.id !== id));
       setFilteredData(filteredData.filter(employee => employee.id !== id));
     } catch (error) {
