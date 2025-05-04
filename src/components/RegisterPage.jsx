@@ -30,7 +30,7 @@ const RegisterPage = () => {
         }
     
         try {
-            const response = await axios.post(`${import.meta.env.VITE_API_URL}manager/register`, {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/manager/register`, {
                 email,
                 username,
                 password,

@@ -25,7 +25,7 @@ export default function AddEmployeePage() {
     }
   
     try {
-      const response = await axios.post(`${import.meta.env.VITE_API_URL}employee/add`, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/employee/add`, {
         name,
         division,
         salary,
