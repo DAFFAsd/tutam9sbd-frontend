@@ -1,0 +1,8 @@
+.transition-opacity {
+    transition: opacity 1s ease-in-out;
+  }
+  
+.transition-transform {
+    transition: transform 1s ease-in-out;
+  }
+  
